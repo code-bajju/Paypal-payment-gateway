@@ -4,13 +4,114 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PayPal Payment Page</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap">
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #444;
+      display: flex;
+      justify-content: center;
+      padding: 5px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #007BFF;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #2E3192;
+    }
+
+    p {
+      text-align: center;
+      color: #555;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      margin-right: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #2E3192;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #007BFF;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>PayPal Payment Page</h1>
+  </header>
 
-  <h1>Welcome to our Payment Page</h1>
-  <h2>Select Amount:</h2>
-  <input type="number" id="custom-amount" placeholder="Enter custom amount" oninput="updateAmount()">
-  <div id="paypal-button-container"></div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h2>Welcome to our Payment Page</h2>
+    <h3>Select Amount:</h3>
+    <input type="number" id="custom-amount" placeholder="Enter custom amount" oninput="updateAmount()">
+    <div id="paypal-button-container"></div>
+  </div>
+
+  <footer>
+    &copy; 2023 Your Company. All rights reserved.
+  </footer>
 
   <script src="https://www.paypal.com/sdk/js?client-id=AWTpN-NDBef_ZEJnwdz0Dr0yb9qBRphsphBr_qBln51RRahlcCZRiRXuJXLF0IwwYXn99KMNsAbv67VK"></script>
   <script>
